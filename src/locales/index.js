@@ -8,14 +8,14 @@ import es from '@/locales/es.json'
 import fa from '@/locales/fa.json'
 import fr from '@/locales/fr.json'
 import hu from '@/locales/hu.json'
-import ja from '@/locales/ja.json'
+import ja from '@/locales/ja.js'
 import ko from '@/locales/ko.json'
 import pt from '@/locales/pt.json'
 import ru from '@/locales/ru.json'
 import zh from '@/locales/zh.json'
 import zhtw from '@/locales/zh_tw.json'
 
-export default {
+const locales = {
   da: da.default,
   de: de,
   en: en,
@@ -25,7 +25,7 @@ export default {
   fa: fa.default,
   fr: fr.default,
   hu: hu.default,
-  ja: ja.default,
+  ja: ja,
   ko: ko.default,
   nl: nl.default,
   pt: pt.default,
@@ -33,3 +33,5 @@ export default {
   zh: zh.default,
   zw: zhtw.default
 }
+
+export default locales
