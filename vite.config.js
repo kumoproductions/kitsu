@@ -42,12 +42,13 @@ export default defineConfig({
     port: 8080,
     proxy: {
       '/api': {
-        target: process.env.KITSU_API_TARGET || 'http://127.0.0.1:5000',
+        target: process.env.KITSU_API_TARGET || 'http://127.0.0.1:80/api',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '')
       },
       '/socket.io': {
-        target: process.env.KITSU_EVENT_TARGET || 'http://127.0.0.1:5001',
+        target:
+          process.env.KITSU_EVENT_TARGET || 'http://127.0.0.1:80/socket.io',
         changeOrigin: true,
         ws: true
       }
