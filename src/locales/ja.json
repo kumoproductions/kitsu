@@ -599,7 +599,7 @@
       }
     },
     "main": {
-      "about": "について",
+      "about": "Kitsuについて",
       "active": "アクティブ",
       "activity": "アクティビティ",
       "add": "追加",
@@ -660,7 +660,7 @@
       "frames": "フレーム",
       "frame_in": "開始フレーム",
       "frame_out": "終了フレーム",
-      "from": "から",
+      "from": "開始日",
       "go_productions": "プロダクションに戻る",
       "hour": "時間",
       "hide_support_chat": "サポートチャットを隠す",
@@ -726,7 +726,7 @@
       "status": "ステータス",
       "tasks": "タスク",
       "total": "合計",
-      "to": "へ",
+      "to": "終了日",
       "timeSpent": "作業時間",
       "tutorials": "チュートリアル",
       "type": "タイプ",
@@ -1310,13 +1310,13 @@
       "webhook_error": "webhook の投稿中にエラーが発生しました",
       "fields": {
         "name": "スタジオ名",
-        "hours_by_day": "1日あたりの時間",
+        "hours_by_day": "1日あたりの勤務時間",
         "slack_token": "Slack トークン（任意）",
         "mattermost_webhook": "Mattermost Webhook（任意）",
         "discord_token": "Discord トークン（任意）",
-        "timesheets_locked": "1週間以上古いアーティストのタイムシートをロック",
+        "timesheets_locked": "1週間以上前のアーティストのタイムシートをロック",
         "use_original_name": "ダウンロードに元のファイル名を使用",
-        "show_hd_default": "デフォルトでHD品質の動画を表示（遅い）",
+        "show_hd_default": "デフォルトでHD品質の動画を表示（表示が遅くなります）",
         "format_duration_in_hours": "時間と予定工数を時間単位で表示",
         "dark_theme_by_default": "デフォルトでダークテーマを使用"
       },
