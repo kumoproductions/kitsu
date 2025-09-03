@@ -543,7 +543,7 @@
       "login_failed": "ログインに失敗しました。認証情報を確認してください。",
       "login_server_failed": "ログイン中にサーバーエラーが発生しました。",
       "login_page": "キャンセル",
-      "redirecting": "{secondsLeft} 秒後にリダイレクトします...",
+      "redirecting": "{secondsLeft} 秒後にリダイレクトします…",
       "reset_change_password": "パスワードを変更",
       "reset_change_password_failed": "パスワードの変更に失敗しました。手順を最初からやり直してください。",
       "reset_change_password_form_failed": "入力したパスワードに問題があります。8文字以上で、確認用と一致しているかご確認ください。",
@@ -682,7 +682,7 @@
       "less_filters": "フィルターを減らす",
       "link": "リンク",
       "load_more": "さらに読み込み",
-      "loading": "読み込み中...",
+      "loading": "読み込み中…",
       "loading_data": "データを読み込み中",
       "loading_error": "データの読み込み中にエラーが発生しました。",
       "logout": "ログアウト",
@@ -976,7 +976,7 @@
       "build_daily": "日次保留",
       "build_weekly": "すべての保留",
       "build_mp4": ".mp4 をビルド",
-      "building": "ビルド中...",
+      "building": "ビルド中…",
       "client_playlist": "クライアントプレイリスト",
       "comparing_missing_plan": "現在のタイプにエンティティが不足",
       "create_for_selection": "選択したタスクからプレイリストを生成",
@@ -1246,8 +1246,8 @@
       "avatar": {
         "title": "アバターを変更",
         "error_upload": "画像のアップロード中にエラーが発生しました。",
-        "updating": "更新中...",
-        "removing": "削除中..."
+        "updating": "更新中…",
+        "removing": "削除中…"
       },
       "change_password": {
         "button": "パスワードを変更",
@@ -1343,7 +1343,7 @@
       "title_entities": "エンティティ用ステータス",
       "title_concepts": "コンセプト用ステータス",
       "help": {
-        "entities": "アセット、ショット、シーケンス、..."
+        "entities": "アセット、ショット、シーケンス、…"
       },
       "fields": {
         "color": "色",
@@ -1371,7 +1371,7 @@
       "new_task_type": "タスクタイプを作成",
       "no_task_types": "このエンティティタイプのタスクタイプはありません",
       "number": "タスクタイプ | タスクタイプ",
-      "select_task_type": "タスクタイプを選択...",
+      "select_task_type": "タスクタイプを選択…",
       "title": "タスクタイプ",
       "fields": {
         "dedicated_to": "対象",
@@ -1486,7 +1486,7 @@
     "team_schedule": {
       "title": "スケジュール",
       "title_main": "チームスケジュール",
-      "person_placeholder": "ユーザーを選択..."
+      "person_placeholder": "ユーザーを選択…"
     },
     "quota": {
       "average": "平均",
@@ -1604,7 +1604,7 @@
       "auto_revision": "自動リビジョン番号を復元",
       "assign": "選択されたタスクに割り当て | {nbSelectedTasks} 件の選択されたタスクに割り当て",
       "assignation_disclaimer": "リストにユーザーが不足している場合、それはチームに登録されていないことを意味します。",
-      "assign_explaination": "割り当てるユーザーを選択...",
+      "assign_explaination": "割り当てるユーザーを選択…",
       "assignation_warning": "警告: 割り当てを非表示にしているため、結果が表示されません",
       "back_to_list": "リストに戻る",
       "bigger": "タスクパネルを拡大",
@@ -1714,7 +1714,7 @@
       "unassigned_tasks": "未割り当てのタスク",
       "validated": "承認済",
       "validation": "承認",
-      "with_comment": "コメント付き...",
+      "with_comment": "コメント付き…",
       "difficulty": {
         "very_easy": "非常に簡単",
         "easy": "簡単",
@@ -1773,12 +1773,12 @@
     },
     "preview": {
       "broken": "このプレビューは破損しています。",
-      "processing": "動画処理中..."
+      "processing": "動画処理中…"
     },
     "search": {
       "limit": "最大結果数:",
       "match_details": "{target} で一致が見つかりました",
-      "placeholder": "データベースでエンティティを検索...",
+      "placeholder": "データベースでエンティティを検索…",
       "title": "エンティティ検索"
     },
     "software_licenses": {
