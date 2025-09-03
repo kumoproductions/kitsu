@@ -836,7 +836,7 @@
       "all_statuses": "既読と未読",
       "all_types": "すべてのタイプ",
       "all_notifications": "すべての通知",
-      "assignation": "割り当て",
+      "assignation": "アサイン",
       "assigned_you": "このタスクにあなたをアサイン",
       "comment": "コメント",
       "commented_on": "コメント",
@@ -858,7 +858,7 @@
       "reply": "返信",
       "replied_on": "コメントに返信",
       "publish": "公開",
-      "published": "プレビューを公開",
+      "published": "リビジョンを公開",
       "show_comments": "コメントを表示",
       "unread_notifications": "未読通知 | 未読通知",
       "title": "通知",
@@ -1200,8 +1200,8 @@
       "status": {
         "closed": "クローズ",
         "open": "オープン",
-        "active": "オープン",
-        "archived": "クローズ"
+        "active": "アクティブ",
+        "archived": "アーカイブ"
       },
       "style": {
         "2d": "アニメーション（デジタル工程）",
@@ -1732,7 +1732,7 @@
         "drawings": "枚数",
         "due_date": "締切日",
         "duration": "期間",
-        "end_date": "フィードバック",
+        "end_date": "レビュー実施日",
         "entity": "エンティティ",
         "entity_name": "名前",
         "estimated_quota": "クォータ",
