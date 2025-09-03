@@ -1257,7 +1257,7 @@
       },
       "two_factor_authentication": {
         "title": "二要素認証",
-        "scan_qrcode": "TOTP アプリでこのQRコードをスキャンしてください。",
+        "scan_qrcode": "TOTP アプリでこの QR コードをスキャンしてください。",
         "otp_secret": "OTP シークレット",
         "totp": {
           "button_enable": "TOTP を有効化",
@@ -1268,20 +1268,20 @@
           "error_disable": "TOTP の無効化中にエラーが発生しました。"
         },
         "email_otp": {
-          "button_enable": "メールによるOTP を有効化",
-          "button_disable": "メールによるOTP を無効化",
-          "button_validate_disable": "検証してメールによるOTP を無効化",
-          "button_validate": "検証してメールによるOTP を有効化",
-          "error_enable": "メールによるOTP の有効化中にエラーが発生しました。",
-          "error_disable": "メールによるOTP の無効化中にエラーが発生しました。"
+          "button_enable": "メールによる OTP を有効化",
+          "button_disable": "メールによる OTP を無効化",
+          "button_validate_disable": "検証してメールによる OTP を無効化",
+          "button_validate": "検証してメールによる OTP を有効化",
+          "error_enable": "メールによる OTP の有効化中にエラーが発生しました。",
+          "error_disable": "メールによる OTP の無効化中にエラーが発生しました。"
         },
         "fido": {
           "device_name": "FIDO デバイス名",
-          "registered_devices_title": "登録されたFIDO デバイス:",
-          "button_register": "新しいFIDO デバイスを登録",
+          "registered_devices_title": "登録された FIDO デバイス:",
+          "button_register": "新しい FIDO デバイスを登録",
           "error_register": "FIDO デバイスの登録中にエラーが発生しました。",
           "error_unregister": "FIDO デバイスの登録解除中にエラーが発生しました。",
-          "button_unregister": "検証してFIDO デバイスの登録を解除"
+          "button_unregister": "検証して FIDO デバイスの登録を解除"
         },
         "recovery_codes": {
           "title": "リカバリーコード",
