@@ -314,7 +314,7 @@ aside {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 230px;
+  width: 240px;
   background-color: white;
   padding: 15px;
   overflow-y: auto;
@@ -331,7 +331,7 @@ aside {
 }
 
 aside.hidden-bar {
-  left: -250px;
+  left: -260px;
   transition: all 0.3s ease;
 }
 
