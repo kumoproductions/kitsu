@@ -1,0 +1,19 @@
+# Enforce LF line endings for all text files in working tree and repository
+* text=auto eol=lf
+
+# Keep Windows scripts with CRLF (if any)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Treat common binary formats explicitly (optional safety)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
