@@ -49,7 +49,12 @@
     </div>
     <table-info :is-loading="isLoading" :is-error="isError"> </table-info>
     <p class="has-text-centered nb-asset-types">
-      {{ entries.length }} {{ $tc('departments.number', entries.length) }}
+      {{ $te('departments.header') ? '' : entries.length }}
+      {{
+        $te('departments.header')
+          ? $tc('departments.header', entries.length, { count: entries.length })
+          : $tc('departments.number', entries.length)
+      }}
     </p>
   </div>
 </template>

@@ -8,21 +8,14 @@
       </span>
       <span class="tag">
         {{ formatDuration(stats.total_duration) }}
-        {{
-          isDurationInHours
-            ? $tc('main.hours_spent', formatDuration(stats.total_duration))
-            : $tc('main.days_spent', formatDuration(stats.total_duration))
-        }}
+        {{ $t('main.days_spent_label') }}
+        {{ formatDuration(stats.total_duration) }}
+        {{ $t('main.days') }}
         /
         {{ formatDuration(stats.total_estimation) }}
-        {{
-          isDurationInHours
-            ? $tc(
-                'main.hours_estimated',
-                formatDuration(stats.total_estimation)
-              )
-            : $tc('main.days_estimated', formatDuration(stats.total_estimation))
-        }}
+        {{ $t('main.days_estimated_label') }}
+        {{ formatDuration(stats.total_estimation) }}
+        {{ $t('main.days') }}
       </span>
     </div>
     <div class="color-wrapper">

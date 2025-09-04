@@ -290,12 +290,23 @@
     </div>
 
     <p class="has-text-centered footer-info" v-if="tasks.length && !isLoading">
-      {{ tasks.length }} {{ $tc('tasks.tasks', tasks.length) }} ({{
-        formatDuration(timeEstimated)
+      {{ $te('tasks.tasks_header') ? '' : tasks.length }}
+      {{
+        $te('tasks.tasks_header')
+          ? $tc('tasks.tasks_header', tasks.length, { count: tasks.length })
+          : $tc('tasks.tasks', tasks.length)
       }}
-      {{ $tc('main.days_estimated', isTimeEstimatedPlural) }},
-      {{ formatDuration(timeSpent) }}
-      {{ $tc('main.days_spent', isTimeSpentPlural) }})
+      (
+      {{
+        $te('main.days_estimated_label')
+          ? `${$t('main.days_estimated_label')} ${formatDuration(timeEstimated)} ${$t('main.days')}`
+          : `${formatDuration(timeEstimated)} ${$tc('main.days_estimated', isTimeEstimatedPlural)}`
+      }},
+      {{
+        $te('main.days_spent_label')
+          ? `${$t('main.days_spent_label')} ${formatDuration(timeSpent)} ${$t('main.days')}`
+          : `${formatDuration(timeSpent)} ${$tc('main.days_spent', isTimeSpentPlural)}`
+      }})
     </p>
   </div>
 </template>

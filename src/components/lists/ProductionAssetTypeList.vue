@@ -119,8 +119,14 @@
       class="has-text-centered nb-asset-types"
       v-if="!isEmptyList && !isLoading"
     >
-      {{ displayedAssetTypesLength }}
-      {{ $tc('asset_types.number', displayedAssetTypesLength) }}
+      {{ $te('asset_types.header') ? '' : displayedAssetTypesLength }}
+      {{
+        $te('asset_types.header')
+          ? $tc('asset_types.header', displayedAssetTypesLength, {
+              count: displayedAssetTypesLength
+            })
+          : $tc('asset_types.number', displayedAssetTypesLength)
+      }}
     </p>
   </div>
 </template>

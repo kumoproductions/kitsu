@@ -772,7 +772,14 @@
     </div>
 
     <p class="has-text-centered nb-shots" v-if="!isEmptyList && !isLoading">
-      {{ displayedShotsLength }} {{ $tc('shots.number', displayedShotsLength) }}
+      {{ $te('shots.header') ? '' : displayedShotsLength }}
+      {{
+        $te('shots.header')
+          ? $tc('shots.header', displayedShotsLength, {
+              count: displayedShotsLength
+            })
+          : $tc('shots.number', displayedShotsLength)
+      }}
       <span v-if="displayedShotsFrames">
         -
         {{ displayedShotsFrames }}
@@ -786,10 +793,17 @@
       <span
         v-show="displayedShotsTimeSpent > 0 || displayedShotsEstimation > 0"
       >
-        ({{ formatDuration(displayedShotsTimeSpent) }}
-        {{ $tc('main.days_spent', displayedShotsTimeSpent) }},
-        {{ formatDuration(displayedShotsEstimation) }}
-        {{ $tc('main.man_days', displayedShotsEstimation) }})
+        (
+        {{
+          $te('main.days_spent_label')
+            ? `${$t('main.days_spent_label')} ${formatDuration(displayedShotsTimeSpent)} ${$t('main.days')}`
+            : `${formatDuration(displayedShotsTimeSpent)} ${$tc('main.days_spent', displayedShotsTimeSpent)}`
+        }},
+        {{
+          $te('main.days_estimated_label')
+            ? `${$t('main.days_estimated_label')} ${formatDuration(displayedShotsEstimation)} ${$t('main.days')}`
+            : `${formatDuration(displayedShotsEstimation)} ${$tc('main.days_estimated', displayedShotsEstimation)}`
+        }})
       </span>
     </p>
   </div>

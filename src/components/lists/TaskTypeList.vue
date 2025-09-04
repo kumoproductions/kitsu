@@ -72,7 +72,12 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered nb-task-types" v-if="entries.length > 0">
-      {{ entries.length }} {{ $tc('task_types.number', entries.length) }}
+      {{ $te('task_types.header') ? '' : entries.length }}
+      {{
+        $te('task_types.header')
+          ? $tc('task_types.header', entries.length, { count: entries.length })
+          : $tc('task_types.number', entries.length)
+      }}
     </p>
   </div>
 </template>

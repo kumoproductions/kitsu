@@ -173,7 +173,12 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered footer-info" v-if="!isLoading">
-      {{ tasks.length }} {{ $tc('tasks.tasks', tasks.length) }}
+      {{ $te('tasks.tasks_header') ? '' : tasks.length }}
+      {{
+        $te('tasks.tasks_header')
+          ? $tc('tasks.tasks_header', tasks.length, { count: tasks.length })
+          : $tc('tasks.tasks', tasks.length)
+      }}
     </p>
 
     <day-off-modal

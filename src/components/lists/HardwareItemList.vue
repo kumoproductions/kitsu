@@ -54,7 +54,14 @@
     <table-info :is-loading="isLoading" :is-error="isError"> </table-info>
 
     <p class="has-text-centered nb-hardware-items">
-      {{ entries.length }} {{ $tc('hardware_items.number', entries.length) }}
+      {{ $te('hardware_items.header') ? '' : entries.length }}
+      {{
+        $te('hardware_items.header')
+          ? $tc('hardware_items.header', entries.length, {
+              count: entries.length
+            })
+          : $tc('hardware_items.number', entries.length)
+      }}
     </p>
   </div>
 </template>

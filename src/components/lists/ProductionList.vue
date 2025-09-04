@@ -139,7 +139,12 @@
     <table-info :is-loading="isLoading" :is-error="isError"> </table-info>
 
     <p class="has-text-centered nb-productions">
-      {{ entries.length }} {{ $tc('productions.number', entries.length) }}
+      {{ $te('productions.header') ? '' : entries.length }}
+      {{
+        $te('productions.header')
+          ? $tc('productions.header', entries.length, { count: entries.length })
+          : $tc('productions.number', entries.length)
+      }}
     </p>
   </div>
 </template>

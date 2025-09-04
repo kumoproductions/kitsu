@@ -46,7 +46,12 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered">
-      {{ entries.length }} {{ $tc('backgrounds.number', entries.length) }}
+      {{ $te('backgrounds.header') ? '' : entries.length }}
+      {{
+        $te('backgrounds.header')
+          ? $tc('backgrounds.header', entries.length, { count: entries.length })
+          : $tc('backgrounds.number', entries.length)
+      }}
     </p>
   </div>
 </template>

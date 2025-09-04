@@ -53,7 +53,12 @@
     </p>
 
     <p class="has-text-centered footer-info" v-else>
-      {{ entries.length }} {{ $tc('people.persons', entries.length) }}
+      {{ $te('people.header') ? '' : entries.length }}
+      {{
+        $te('people.header')
+          ? $tc('people.header', entries.length, { count: entries.length })
+          : $tc('people.persons', entries.length)
+      }}
     </p>
   </div>
 </template>

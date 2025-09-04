@@ -129,8 +129,14 @@
     </div>
 
     <p class="has-text-centered nb-sequences" v-if="!isEmptyList && !isLoading">
-      {{ displayedSequencesLength }}
-      {{ $tc('sequences.number', displayedSequencesLength) }}
+      {{ $te('sequences.header') ? '' : displayedSequencesLength }}
+      {{
+        $te('sequences.header')
+          ? $tc('sequences.header', displayedSequencesLength, {
+              count: displayedSequencesLength
+            })
+          : $tc('sequences.number', displayedSequencesLength)
+      }}
     </p>
   </div>
 </template>

@@ -124,7 +124,12 @@
         <div class="sequence-casting" v-show="currentSection === 'casting'">
           <div class="casting-data mt1">
             <span v-show="currentSection === 'casting' && nbAssets > 0">
-              {{ nbAssets }} {{ $tc('assets.number', nbAssets) }}
+              {{ $te('assets.header') ? '' : nbAssets }}
+              {{
+                $te('assets.header')
+                  ? $tc('assets.header', nbAssets, { count: nbAssets })
+                  : $tc('assets.number', nbAssets)
+              }}
             </span>
             <span
               class="tag tag-standby"

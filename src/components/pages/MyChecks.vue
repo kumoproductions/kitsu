@@ -61,8 +61,14 @@
 
         <div class="flexrow">
           <h1 class="title mt1 flexrow-item filler">
-            {{ nbTasksToCheck }}
-            {{ $tc('my_checks.title', nbTasksToCheck) }}
+            {{ $te('my_checks.header') ? '' : nbTasksToCheck }}
+            {{
+              $te('my_checks.header')
+                ? $tc('my_checks.header', nbTasksToCheck, {
+                    count: nbTasksToCheck
+                  })
+                : $tc('my_checks.title', nbTasksToCheck)
+            }}
           </h1>
           <button-simple
             class="flexrow-item"
@@ -194,7 +200,6 @@ export default {
         return this.taskStatusMap.get(task.task_status_id).is_feedback_request
       }).length
     },
-
     assignees() {
       const assignees = []
       const assigneesMap = {}

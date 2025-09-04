@@ -1,8 +1,12 @@
 <template>
   <p class="has-text-centered nb-tasks">
-    {{ tasks.length }} {{ $tc('tasks.number', tasks.length) }} ({{
-      formatDuration(timeEstimated)
+    {{ $te('tasks.header') ? '' : tasks.length }}
+    {{
+      $te('tasks.header')
+        ? $tc('tasks.header', tasks.length, { count: tasks.length })
+        : $tc('tasks.number', tasks.length)
     }}
+    ({{ formatDuration(timeEstimated) }}
     {{
       isDurationInHours
         ? $tc('main.hours_estimated', formatDuration(timeEstimated, false))

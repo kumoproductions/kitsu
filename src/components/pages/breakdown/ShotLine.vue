@@ -249,8 +249,14 @@
         v-if="assetsByAssetTypesMap[assetType] !== undefined"
       >
         <div class="flexrow-item mb05">
-          {{ nbAssetsForType(assetType) }}
-          {{ $tc('assets.number', nbAssetsForType(assetType)) }}
+          {{ $te('assets.header') ? '' : nbAssetsForType(assetType) }}
+          {{
+            $te('assets.header')
+              ? $tc('assets.header', nbAssetsForType(assetType), {
+                  count: nbAssetsForType(assetType)
+                })
+              : $tc('assets.number', nbAssetsForType(assetType))
+          }}
         </div>
         <div class="asset-type-items flexrow-item">
           <asset-block

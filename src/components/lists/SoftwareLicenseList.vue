@@ -66,7 +66,14 @@
     <table-info :is-loading="isLoading" :is-error="isError"> </table-info>
 
     <p class="has-text-centered nb-software-licenses">
-      {{ entries.length }} {{ $tc('software_licenses.number', entries.length) }}
+      {{ $te('software_licenses.header') ? '' : entries.length }}
+      {{
+        $te('software_licenses.header')
+          ? $tc('software_licenses.header', entries.length, {
+              count: entries.length
+            })
+          : $tc('software_licenses.number', entries.length)
+      }}
     </p>
   </div>
 </template>

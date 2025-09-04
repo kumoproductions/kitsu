@@ -493,15 +493,22 @@
     </div>
 
     <p class="has-text-centered nb-episodes" v-if="!isEmptyList && !isLoading">
-      {{ displayedEpisodesLength }}
-      {{ $tc('episodes.number', displayedEpisodesLength) }}
+      {{ $te('episodes.header') ? '' : displayedEpisodesLength }}
+      {{
+        $te('episodes.header')
+          ? $tc('episodes.header', displayedEpisodesLength, {
+              count: displayedEpisodesLength
+            })
+          : $tc('episodes.number', displayedEpisodesLength)
+      }}
       <span
         v-if="displayedEpisodesTimeSpent > 0 && displayedEpisodesEstimation > 0"
       >
-        ({{ formatDuration(displayedEpisodesTimeSpent) }}
-        {{ $tc('main.days_spent', displayedEpisodesTimeSpent) }},
-        {{ formatDuration(displayedEpisodesEstimation) }}
-        {{ $tc('main.man_days', displayedEpisodesEstimation) }})
+        (
+        {{ $t('main.days_spent_label') }}
+        {{ formatDuration(displayedEpisodesTimeSpent) }} {{ $t('main.days') }},
+        {{ $t('main.days_estimated_label') }}
+        {{ formatDuration(displayedEpisodesEstimation) }} {{ $t('main.days') }})
       </span>
     </p>
   </div>

@@ -552,23 +552,22 @@
     </div>
 
     <p class="has-text-centered nb-assets" v-if="!isEmptyList && !isLoading">
-      {{ displayedAssetsLength }}
-      {{ $tc('assets.number', displayedAssetsLength) }}
+      {{ $te('assets.header') ? '' : displayedAssetsLength }}
+      {{
+        $te('assets.header')
+          ? $tc('assets.header', displayedAssetsLength, {
+              count: displayedAssetsLength
+            })
+          : $tc('assets.number', displayedAssetsLength)
+      }}
       <span
         v-show="displayedAssetsTimeSpent > 0 || displayedAssetsEstimation > 0"
       >
-        ({{ formatDuration(displayedAssetsTimeSpent) }}
-        {{
-          isDurationInHours
-            ? $tc('main.hours_spent', displayedAssetsTimeSpent)
-            : $tc('main.days_spent', displayedAssetsTimeSpent)
-        }},
-        {{ formatDuration(displayedAssetsEstimation) }}
-        {{
-          isDurationInHours
-            ? $tc('main.hours_estimated', displayedAssetsEstimation)
-            : $tc('main.man_days', displayedAssetsEstimation)
-        }})
+        (
+        {{ $t('main.days_spent_label') }}
+        {{ formatDuration(displayedAssetsTimeSpent) }} {{ $t('main.days') }},
+        {{ $t('main.days_estimated_label') }}
+        {{ formatDuration(displayedAssetsEstimation) }} {{ $t('main.days') }})
       </span>
     </p>
   </div>

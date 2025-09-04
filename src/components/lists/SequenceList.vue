@@ -458,17 +458,25 @@
     </div>
 
     <p class="has-text-centered nb-sequences" v-if="!isEmptyList && !isLoading">
-      {{ displayedSequencesLength }}
-      {{ $tc('sequences.number', displayedSequencesLength) }}
+      {{ $te('sequences.header') ? '' : displayedSequencesLength }}
+      {{
+        $te('sequences.header')
+          ? $tc('sequences.header', displayedSequencesLength, {
+              count: displayedSequencesLength
+            })
+          : $tc('sequences.number', displayedSequencesLength)
+      }}
       <span
         v-if="
           displayedSequencesTimeSpent > 0 && displayedSequencesEstimation > 0
         "
       >
-        ({{ formatDuration(displayedSequencesTimeSpent) }}
-        {{ $tc('main.days_spent', displayedSequencesTimeSpent) }},
+        (
+        {{ $t('main.days_spent_label') }}
+        {{ formatDuration(displayedSequencesTimeSpent) }} {{ $t('main.days') }},
+        {{ $t('main.days_estimated_label') }}
         {{ formatDuration(displayedSequencesEstimation) }}
-        {{ $tc('main.man_days', displayedSequencesEstimation) }})
+        {{ $t('main.days') }})
       </span>
     </p>
   </div>

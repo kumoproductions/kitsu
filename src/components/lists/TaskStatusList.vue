@@ -85,7 +85,12 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered nb-task-status">
-      {{ entries.length }} {{ $tc('task_status.number', entries.length) }}
+      {{ $te('task_status.header') ? '' : entries.length }}
+      {{
+        $te('task_status.header')
+          ? $tc('task_status.header', entries.length, { count: entries.length })
+          : $tc('task_status.number', entries.length)
+      }}
     </p>
   </div>
 </template>

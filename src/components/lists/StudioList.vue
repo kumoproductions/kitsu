@@ -31,7 +31,12 @@
     </div>
     <table-info :is-loading="isLoading" :is-error="isError"> </table-info>
     <p class="has-text-centered nb-asset-types">
-      {{ entries.length }} {{ $tc('studios.number', entries.length) }}
+      {{ $te('studios.header') ? '' : entries.length }}
+      {{
+        $te('studios.header')
+          ? $tc('studios.header', entries.length, { count: entries.length })
+          : $tc('studios.number', entries.length)
+      }}
     </p>
   </div>
 </template>

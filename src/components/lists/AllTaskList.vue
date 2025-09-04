@@ -145,12 +145,23 @@
       <table-info :is-loading="isLoading" :is-error="isError" />
     </div>
     <p class="has-text-centered nb-tasks" v-if="!isLoading">
-      {{ stats.total }} {{ $tc('tasks.number', stats.total) }} ({{
-        formatDuration(stats.total_estimation)
+      {{ $te('tasks.header') ? '' : stats.total }}
+      {{
+        $te('tasks.header')
+          ? $tc('tasks.header', stats.total, { count: stats.total })
+          : $tc('tasks.number', stats.total)
       }}
-      {{ $tc('main.days_estimated', isTimeEstimatedPlural) }},
-      {{ formatDuration(stats.total_duration) }}
-      {{ $tc('main.days_spent', isTimeSpentPlural) }})
+      ({{ formatDuration(stats.total_estimation) }}
+      {{
+        $te('main.days_estimated_label')
+          ? `${$t('main.days_estimated_label')} ${$t('main.days')}`
+          : $tc('main.days_estimated', isTimeEstimatedPlural)
+      }},
+      {{
+        $te('main.days_spent_label')
+          ? `${$t('main.days_spent_label')} ${formatDuration(stats.total_duration)} ${$t('main.days')}`
+          : `${formatDuration(stats.total_duration)} ${$tc('main.days_spent', isTimeSpentPlural)}`
+      }})
     </p>
   </div>
 </template>

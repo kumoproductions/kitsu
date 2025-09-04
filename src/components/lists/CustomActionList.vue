@@ -45,7 +45,14 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered nb-custom-actions">
-      {{ entries.length }} {{ $tc('custom_actions.number', entries.length) }}
+      {{ $te('custom_actions.header') ? '' : entries.length }}
+      {{
+        $te('custom_actions.header')
+          ? $tc('custom_actions.header', entries.length, {
+              count: entries.length
+            })
+          : $tc('custom_actions.number', entries.length)
+      }}
     </p>
   </div>
 </template>

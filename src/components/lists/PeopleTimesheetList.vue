@@ -169,7 +169,12 @@
     <table-info :is-loading="isLoading" :is-error="isError" />
 
     <p class="has-text-centered footer-info" v-if="!isLoading">
-      {{ people.length }} {{ $tc('people.persons', people.length) }}
+      {{ $te('people.header') ? '' : people.length }}
+      {{
+        $te('people.header')
+          ? $tc('people.header', people.length, { count: people.length })
+          : $tc('people.persons', people.length)
+      }}
     </p>
   </div>
 </template>
